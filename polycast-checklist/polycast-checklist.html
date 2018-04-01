@@ -1,58 +1,24 @@
 <link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../polymer/lib/elements/dom-repeat.html">
 
 <dom-module id="polycast-checklist">
   <template>
   <h3>Todo: </h3>
+  <dom-repeat items="{{tasks}}">
+    <template>
+
+
     <div>
       <input type="checkbox">
       <input type="input">
     </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
+    </template>
+  </dom-repeat>
+
+
 
     <h3>Completed: </h3>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
-    <div>
-      <input type="checkbox">
-      <input type="input">
-    </div>
+    <!-- add completed stuff -->
     <button type="" name="button">Task</button>
   </template>
 
@@ -69,13 +35,14 @@
       static get is() { return 'polycast-checklist'; }
       static get properties() {
         return {
-          prop1: {
-            type: String,
-            value: 'polycast-checklist'
+          tasks: {
+            type: Array,
+            value: () => [1,2,3,4,5]
+          }
           }
         };
       }
-    }
+    
 
     window.customElements.define(PolycastChecklist.is, PolycastChecklist);
   </script>
