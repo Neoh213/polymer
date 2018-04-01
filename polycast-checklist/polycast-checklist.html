@@ -4,13 +4,14 @@
 <dom-module id="polycast-checklist">
   <template>
   <h3>Todo: </h3>
-  <dom-repeat items="{{tasks}}">
+  <dom-repeat items="{{tasks}}"
+    as = "task">
     <template>
 
 
     <div>
       <input type="checkbox">
-      <input type="input">
+      <input type="text" value = "{{task}}">
     </div>
     </template>
   </dom-repeat>
@@ -42,7 +43,7 @@
           }
         };
       }
-    
+
 
     window.customElements.define(PolycastChecklist.is, PolycastChecklist);
   </script>
