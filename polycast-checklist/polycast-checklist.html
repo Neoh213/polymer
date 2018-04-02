@@ -20,7 +20,8 @@
 
   <h3>Todo: </h3>
   <dom-repeat items="{{tasks}}"
-    as = "task">
+    as = "task" filter = "isNotCompleted" observe = "completed">
+
     <template>
 
 
@@ -67,6 +68,11 @@
         };
 
         this.push('tasks', newTask);
+      }
+
+      isNotCompleted(task){
+        return !task.completed;
+
       }
 
 }
