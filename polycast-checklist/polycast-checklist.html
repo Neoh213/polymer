@@ -6,13 +6,24 @@
 
 <dom-module id="polycast-checklist">
   <template>
+  <style>
+    .task{
+      display:flex;
+      align-items: center;
+
+    }
+    paper-input{
+      display:inline-block;
+    }
+  </style>
+
   <h3>Todo: </h3>
   <dom-repeat items="{{tasks}}"
     as = "task">
     <template>
 
 
-    <div>
+    <div class = "task">
       <paper-checkbox></paper-checkbox>
       <paper-input value = "{{task}}"></paper-input>
     </div>
