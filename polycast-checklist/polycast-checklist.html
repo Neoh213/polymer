@@ -17,6 +17,7 @@
       display:inline-block;
     }
   </style>
+  <h2>[[name]]</h2>
 
   <h3>Todo: </h3>
   <dom-repeat
@@ -69,6 +70,10 @@
       static get is() { return 'polycast-checklist'; }
       static get properties() {
         return {
+          name:{
+            type:String,
+            value: 'Todo list'
+          },
           tasks: {
             type: Array,
             value: () => []
